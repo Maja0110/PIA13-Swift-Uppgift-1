@@ -1,0 +1,52 @@
+import SwiftUI
+
+struct ContentView: View {
+    var body: some View {
+        VStack(spacing: 0) {
+            // Gornji red s tri pravokutnika
+            HStack(spacing: 0) {
+                Rectangle()
+                    .fill(Color.red)
+                    .frame(width: UIScreen.main.bounds.width / 3, height: 150)
+                
+                Rectangle()
+                    .fill(Color.green)
+                    .frame(width: UIScreen.main.bounds.width / 3, height: 150)
+                
+                Rectangle()
+                    .fill(Color.yellow)
+                    .frame(width: UIScreen.main.bounds.width / 3, height: 150)
+            }
+            
+            // Sivi pravokutnik
+            Rectangle()
+                .fill(Color.gray)
+                .frame(height: 80)
+            
+            // Plavi pravokutnik s bijelim kvadratom u sredini
+            ZStack {
+                Rectangle()
+                    .fill(Color.blue)
+                
+                Rectangle()
+                    .fill(Color.white)
+                    .frame(width: 80, height: 80)
+            }
+            .frame(height: 300)
+            
+            // Donji crveni pravokutnik s crnim kvadratom desno
+            HStack {
+                Rectangle()
+                    .fill(Color.red)
+                
+                Spacer()
+                
+                Rectangle()
+                    .fill(Color.black)
+                    .frame(width: 50, height: 50)
+            }
+            .frame(height: 50)
+        }
+        .edgesIgnoringSafeArea(.all)
+    }
+}
