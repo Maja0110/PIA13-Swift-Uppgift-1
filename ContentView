@@ -3,7 +3,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack(spacing: 0) {
-            // Gornji red s tri pravokutnika
+            // Top row with three rectangles
             HStack(spacing: 0) {
                 Rectangle()
                     .fill(Color.red)
@@ -18,12 +18,12 @@ struct ContentView: View {
                     .frame(width: UIScreen.main.bounds.width / 3, height: 150)
             }
             
-            // Sivi pravokutnik
+            // Gray rectangle
             Rectangle()
                 .fill(Color.gray)
                 .frame(height: 80)
             
-            // Plavi pravokutnik s bijelim kvadratom u sredini
+            // A blue rectangle with a white square in the middle
             ZStack {
                 Rectangle()
                     .fill(Color.blue)
@@ -34,7 +34,7 @@ struct ContentView: View {
             }
             .frame(height: 300)
             
-            // Donji crveni pravokutnik s crnim kvadratom desno
+            // Lower red rectangle with black square on the right
             HStack {
                 Rectangle()
                     .fill(Color.red)
